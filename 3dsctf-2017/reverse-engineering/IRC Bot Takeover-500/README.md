@@ -1,6 +1,6 @@
-Ransomware
+IRC Bot Takeover
 ===
-**Category:** IRC Bot Takeover, **Points:** 500, **Solves:** 20
+**Category:** Reverse Engineering, **Points:** 500, **Solves:** 20
 
 > WARNING! DON'T EXECUTE THIS SAMPLE IN YOUR OWN PERSONAL MACHINE!!!
 >
@@ -10,7 +10,7 @@ Ransomware
 
 This write-up is about older version of the task. 
 
-Both ransomaware and w32.killah tasks were about xoring strings so let's try to find xoring here also, after checking all functions (only few in executable), we find two functions that do xoring same as in two other tasks:
+W32.killah tasks was about xoring strings so let's try to find xoring here also, after checking all functions (only few in executable), we find two functions that do xoring same as in the other task:
 
     void xor(char byte, char* text, int len)
     {
