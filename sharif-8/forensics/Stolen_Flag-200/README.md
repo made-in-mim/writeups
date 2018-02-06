@@ -42,9 +42,10 @@ containing mostly multiple `rm -rf`, but on uninteresting directories like `/usr
 Let's turn to swap space then. After failed attempt to inspect swap with [volatility framework](https://github.com/volatilityfoundation/volatility),
 googling lead me to [swap_digger](https://github.com/sevagas/swap_digger). This seems to be a quite simple tool for looking for interesting patterns in swap file.
 Example output from author's github:
-![Swap_digger example output] (https://raw.githubusercontent.com/sevagas/swap_digger/master/assets/swap_digger_extended.png)
 
-Running it did not give us anything interesting though - no passwords, some ip addresses, some usual http urls.
+![Swap_digger example output](https://raw.githubusercontent.com/sevagas/swap_digger/master/assets/swap_digger_extended.png)
+
+Running it did not give us anything interesting though - no passwords, some ip addresses, some unremarkable http urls.
 Well, and a list of organizers' windows computers at the time of creating the challenge xD :
 
 ```
@@ -71,6 +72,6 @@ putting it on some public clipboard service sounds like a reasonable idea, and h
 ```
 
 This gave me a few hundreds of urls, with `https://gist.github.com/clipboardstolenthings` boldly standing out.
-The link is now dead, but it contained a few gists, including one with the flag: `SharifCTF{522bab2661c00e672cf1af399d6055cd}`
+The link is now dead, but it used to contain a few gists, including one with the flag: `SharifCTF{522bab2661c00e672cf1af399d6055cd}`
 
 In hindsight, possibly simple `strings Mini.vmdk | egrep 'https?://'` would work as well.

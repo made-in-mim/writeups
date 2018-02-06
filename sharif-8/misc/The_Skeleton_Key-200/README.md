@@ -56,7 +56,7 @@ $ wc -l *
   3771 total
 ```
 
-Most of the classes are some boilerplate code, see for example [R$styleable.class.j](R_styleable.class.j). `MainActivity` sounds like an interesting part, and looks like that:
+Most of the classes are some boilerplate code, see for example [R$styleable.class.j](R_styleable.class.j). `MainActivity` sounds like the interesting part, and it looks like that:
 ```
 public class sharif.cert.sharif.MainActivity extends android.support.v7.app.AppCompatActivity {
   public sharif.cert.sharif.MainActivity();
@@ -96,6 +96,7 @@ public class sharif.cert.sharif.MainActivity extends android.support.v7.app.AppC
 So it initializes a `WebView`, and displays the logo from assets in it. After looking through rest of the code,
 I failed to find any sign of this app doing anything more, and not beliving it decided to run it.
 After some struggling with android emulators it turned out that yup, that's really all. God knows why android needs 15 classes and tens of xml and png files for that.
+
 So I turned to the only remaining thing - the [logo itself](logo.svg).
 
 ![Inkscape objects](inkscape1.png)
@@ -104,4 +105,4 @@ So I turned to the only remaining thing - the [logo itself](logo.svg).
 
 ![Inkscape zoom more](inkscape3.png)
 
-Disappointing. Inkscape -> Object -> Objects and zoom in was all it takes. The flag is SharifCTF{be278492ae9b998eaebe3ca54c8000de}.
+Disappointing. Inkscape -> Object -> Objects and zoom in was all it takes. The flag is `SharifCTF{be278492ae9b998eaebe3ca54c8000de}`.
