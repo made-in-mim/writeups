@@ -11,21 +11,17 @@ Fifteen Puzzle
 > \* 0 if the puzzle is unsoluble
 > 
 > Implement is_soluble() below, and use the code to get the flag!
-> 
+>
 > **Note:** There is an important note on the News page about this challenge.
 >
+> ```
 > def is_soluble(i):
->
 >      return 0
->
 > flag = ' '
->
 > for i in range(128):
->
 >     flag = ('1' if is_soluble(i) else '0') + flag
->
 > print('SharifCTF{%016x}' % int(flag, 2))
->
+> ```
 > [Download](puzzles.txt)
 
 ### Note
