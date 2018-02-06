@@ -11,11 +11,11 @@ BREACH
 
 We are given a pcap file, a quick look shows many TFTP packets. Fortunately wireshark can easily help with that:
 
-[!Wireshark export tftp objects](wireshark_tftp.png)
+![Wireshark export tftp objects](wireshark-tftp.png)
 
 We obtain `linear.rar` file, which contains a single `linear.pcap` file. Here we go again:
 
-[!Wireshark conversations](wireshark_conversations.png)
+![Wireshark conversations](wireshark_conversations.png)
 
 This time we see multiple short TLS 1.2 sessions. Closer look reveals they are very similar, each consists of a single request and response and all are of similar sizes.
 This definitely looks like some kind of attack agains tls, and challenge name helps to find [breachattack.com](http://breachattack.com).
