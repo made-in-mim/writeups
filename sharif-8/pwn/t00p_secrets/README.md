@@ -1,6 +1,7 @@
-# SharifCTF 8 Writeup
+t00p_secrets
+===
 
-## t00p_secrets (250) - 17 solves
+**Category:** Pwn, **Points:** 250, **Solves:** 17, **Rank:** 6
 
 ```
 Someone has designed this top secret management service for us. He was insisting on the term 't00p'. Could you please take a look and find out why?
