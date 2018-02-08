@@ -73,3 +73,6 @@ $ echo -n "Flag: {HiBC NBG8L 965D LMSDF}" | md5sum
 9a55042d8cba49ef460ac8872eff0902
 ```
 So the flag is `SharifCTF{9a55042d8cba49ef460ac8872eff0902}`
+
+###### By [gorbak25](https://github.com/grzegorz225) <gorbak25@gmail.com>
+
