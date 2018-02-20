@@ -1,4 +1,4 @@
-Write ups | Made In MIM
+Writeups | Made In MIM
 ========
 
 Made In MIM is an academic CTF team created at the faculty of Mathematics,
