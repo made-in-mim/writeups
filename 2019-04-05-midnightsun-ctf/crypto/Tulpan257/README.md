@@ -29,4 +29,6 @@ code. In general, we could solve this uniquely, if `alpha` was 41 or less, but
 there is an algorithm that decodes all possible outputs for bigger alphas. It's
 implemented in SageMath. After recovering the secret polynomial `masked`, we
 invert it modulo $x^k+1$ and multiply it by the given polynomial `r`, to
-reconstruct secret flag.
+reconstruct secret flag. Note - for some reason the script doesn't work when run
+as `sage script.sage`, but it does work if you paste the script contents into
+sage REPL.
