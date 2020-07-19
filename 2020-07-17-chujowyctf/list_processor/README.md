@@ -65,9 +65,9 @@ This is when lisp knowledge comes in handy. Apart from the hight level debugger,
                                                  (function sb-alien:void))))
 ```
 which leads to funcion `void ldb_monitor()`.
-Suret enough, when we call it in GDB, we are greeted with friendly message:
+Sure enough, when we call it in GDB, we are greeted with friendly message:
 ```
-pwndbg> ldb
+pwndbg> call (void)ldb_monitor()
 Welcome to LDB, a low-level debugger for the Lisp runtime environment.
 ldb> help
 help	Display this help information.
