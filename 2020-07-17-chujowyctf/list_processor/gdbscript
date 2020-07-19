@@ -1,0 +1,6 @@
+handle SIGUSR1 pass
+handle SIGSEGV pass
+handle SIGILL pass
+define ldb
+    call (void)ldb_monitor()
+end
