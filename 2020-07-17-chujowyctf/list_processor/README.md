@@ -118,7 +118,7 @@ $31=	    info: 0x10013801cf: #<ptr to simple vector>
 ```
 Few things to note here
 
- - SBCL uses tagged pointers (3 LSBs). All symbols will have 0b111 tag.
+ - SBCL uses tagged pointers (4 LSBs). All symbols will have 0b0111 tag.
  - `self` for a code pointer is the executable code of the function.
 
 I dumped memory map containing `0x100055cf00`, loaded it up in Binary Ninja, and disassenbled it.
