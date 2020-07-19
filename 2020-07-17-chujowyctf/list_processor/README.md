@@ -293,7 +293,7 @@ And there's generated graph:
 In the line
 ```
 100055cf65  488b4919           mov     rcx, qword [rcx+0x19]  {0x10005524f8}
-``
+```
 this evaluates to the package of function `STORE`, which is the package `RULES`.
 
 This basically means, that we need to provide a list, so that its first element is a member of package `RULES`. This list will be later evaluated as a Lisp expression (this is what read does - it reads a lisp expression).
