@@ -1,0 +1,36 @@
+{% if user %}
+<style>pre{white-space:wrap}</style>
+<div>Logged in as <strong>{{user}}</strong> (<a href="{{ url_for('.logout') }}">Log Out</a>)</div>
+
+{% for client in clients %}
+<pre>
+<strong>Client Info</strong>
+  {%- for key in client.client_info %}
+  <strong>{{ key }}: </strong>{{ client.client_info[key] }}
+  {%- endfor %}
+<strong>Client Metadata</strong>
+  {%- for key in client.client_metadata %}
+  <strong>{{ key }}: </strong>{{ client.client_metadata[key] }}
+  {%- endfor %}
+</pre>
+<hr>
+{% endfor %}
+
+<br><a href="{{ url_for('.create_client') }}">Create Client</a>
+<br>
+<form action="{{ url_for('.submit_mod_request') }}" method="post">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+  <label> Submit URL for the admins to look at:
+    <input type="text" name="url" placeholder="url">
+  </label>
+  <input type="submit" value="Submit">
+</form>
+
+{% else %}
+<form action="" method="post">
+  <input type="text" id="id_username" name="username" placeholder="username">
+  <input type="password" id="id_password" name="password" placeholder="password">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+  <button id="id_login" type="submit">Login / Signup</button>
+</form>
+{% endif %}
